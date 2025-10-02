@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Kovbasiuk Tetiana</title>
+  <style>
+    :root{
+      --bg:#f7f7f7;
+      --ink:#333;
+      --primary:#2c3e50;
+      --accent:#3498db;
+    }
+    *{ box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    /* ===== HEADER (fixed) ===== */
+    header{
+      background: var(--primary);
+      color:#fff;
+    }
+    .header-wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap; /* щоб на вузьких екранах елементи переносились */
+    }
+    .header-photo{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      flex: 0 0 120px; /* фіксована «клітинка» під фото */
+    }
+    .header-text{
+      flex: 1 1 320px;
+      min-width: 260px;
+    }
+    .header-text h1{
+      margin: 0 0 6px 0;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    .role{
+      margin: 0 0 12px 0;
+      font-size: 1.05rem;
+      opacity: .95;
+    }
+    .contact{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .contact li{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.12);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+    .contact a{
+      color:#fff;
+      text-decoration: none;
+    }
+    .contact a:hover{ text-decoration: underline; }
+
+    @media (max-width: 640px){
+      .header-wrap{
+        flex-direction: column;
+        text-align: center;
+      }
+      .contact{ justify-content: center; }
+    }
+
+    /* ===== CONTENT ===== */
+    .container{
+      max-width: 900px;
+      margin: 24px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .container:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    }
+    section{ margin-bottom: 30px; }
+    h2{
+      color: var(--primary);
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    ul{ list-style: none; padding: 0; }
+    ul li{ margin-bottom: 10px; }
+
+    .skills span{
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      margin: 5px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: .9em;
+    }
+
+    .skills-bar{ margin: 10px 0; }
+    .skills-bar div{
+      height: 20px;
+      background: var(--accent);
+      border-radius: 10px;
+      text-align: right;
+      padding-right: 10px;
+      color: #fff;
+      line-height: 20px;
+      width: 0;
+      animation: fillBar 1.5s forwards;
+    }
+    @keyframes fillBar{
+      from{ width: 0; }
+      to{ width: var(--width); }
+    }
+
+    footer{
+      text-align: center;
+      padding: 20px;
+      background: var(--primary);
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header role="banner">
+    <div class="header-wrap">
+      <img class="header-photo" src="photo.jpg" alt="Фото Тетяни Ковбасюк" />
+      <div class="header-text">
+        <h1>Тетяна Ковбасюк</h1>
+        <p class="role">Лікар-координатор · Різносторонній спеціаліст · 29 років</p>
+        <ul class="contact" aria-label="Контакти">
+          <li>📧 <a href="mailto:tkovbasyk@icloud.com">tkovbasyk@icloud.com</a></li>
+          <li>📱 <a href="tel:+380955641753">+38 (095) 564 17 53</a></li>
+          <li>📍 м. Новоукраїнка, Кіровоградська обл.</li>
+          <li>🔗 <a href="https://t.me/tetyana_kovbasyuk" target="_blank" rel="noopener">Telegram</a></li>
+          <li> <a href="https://github.com/ttsergeevna" target="_blank" rel="noopener">GitHub</a></li>
+          <li>📷 <a href="https://instagram.com/tt.sergeevna" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Про мене</h2>
+      <p>Маю різносторонній досвід: медична освіта, робота у виробництві та знайомство з ІТ. Постійно розвиваюсь, швидко адаптуюсь до нових задач і відповідально ставлюсь до стандартів якості та безпеки.<br>
+        Готова пройти навчання, стажування.<br>
+         Готова до переїзду чі роботи віддалено.<br> 
+         В процесі отримання водійського посвідчення.
+      
+      </p>
+    </section>
+
+    <section>
+      <h2>Навички</h2>
+      <h3>Професійні навички</h3>
+      <ul class="skills">
+        <li><span>Анатомія, фізіологія, медична термінологія</span></li>
+        <li><span>Робота в стресі та багатозадачності</span></li>
+        <li><span>Етика, конфіденційність, протоколи безпеки</span></li>
+        <li><span>Комунікація та клієнтоорієнтованість</span></li>
+        <li><span>Санітарно-гігієнічні норми, асептика</span></li>
+        <li><span>Уважність до деталей, організованість</span></li>
+      </ul>
+
+      <h3>Додаткові навички (IT)</h3>
+      <div class="skills-bar"><div style="--width:80%">HTML 80%</div></div>
+      <div class="skills-bar"><div style="--width:75%">CSS 75%</div></div>
+      <div class="skills-bar"><div style="--width:60%">JavaScript 60%</div></div>
+    </section>
+
+    <section>
+      <h2>Досвід роботи</h2>
+      <ul>
+        <li><b>Телеконтакт</b> — Оператор кол-центру (2020)</li>
+        <li><b>Фахівець з контролю якості (QC Specialist)</b> — Міжнародна виробнича корпорація Sanko Gosei, Англія (2022–2025)</li>
+        <li><b>Лікар координатор</b> — Фірма по медичному туризмі(2025)</li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2>Освіта</h2>
+      <ul>
+        <li><b>Кіровоградський медичний фаховий коледж ім. Є.Й. Мухіна</b> — Сестра медична (2013–2016)</li>
+        <li><b>Донецький національний медичний університет</b> — Лікар, Медицина (2016–2022)</li>
+        <li><b>GoIT.Global</b> — Frontend Developer (2024)</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Тетяна Ковбасюк. Всі права захищені.
+  </footer>
+
+</body>
+</html>
